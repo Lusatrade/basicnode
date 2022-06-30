@@ -4,7 +4,8 @@ let app = express();
 console.log("Hello World");
 
 app.get('/',(req,res)=>{
-    res.send('Hello Express')
+    const path = __dirname + '/views/index.html'
+    res.sendFile(path)
 })
 
 
